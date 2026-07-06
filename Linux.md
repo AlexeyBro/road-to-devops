@@ -109,7 +109,7 @@ tree
 
 ## Работа с папками и файлами
 
-Создать файл
+Создать файл (также используется для работы с метаданными файла)
 
 ```bash
 touch {file_name}
@@ -131,6 +131,24 @@ mkdir -p {parant_folder_name}/{folder_name}
 
 ```bash
 cp {file_name} {folder_name}/{copy_file_name}
+```
+
+Скопировать несколько файлов с помощью *
+
+```bash
+cp -r {folder_name}/{copy_file_name*} {destination_folder_name}
+```
+
+Скопировать файл с добавлением только более свежих данных
+
+```bash
+cp -u {file_name} {folder_name}/{copy_file_name}
+```
+
+Скопировать директорию в другую директорию
+
+```bash
+cp -r {folder_name} {cope_folder_name}
 ```
 
 Переместить или переименовать файл
