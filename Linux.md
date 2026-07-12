@@ -303,7 +303,9 @@ sudo chmod {permissions} {file_name}
 
 ---
 
-## Работа с пользователями
+## Работа с пользователями и группами
+
+### Пользователи
 
 Список источников информации о пользователях хранится в **/etc/nsswitch.conf**  
 Данные о пользователях хранятся в **/etc/passwd**  
@@ -367,6 +369,78 @@ passwd {user_name}
 ```bash
 adduser {user_name}
 ```
+
+Отредактировать поля пользователя
+
+```bash
+usermod {user_name} {keys}
+```
+
+Удалить только пользователя
+
+```bash
+userdel {user_name}
+```
+
+Удалить пользователя со всеми его данными
+
+```bash
+userdel -r {user_name}
+```
+
+Заблокировать пользователя
+
+```bash
+usermod -L {user_name}
+```
+
+Разблокировать пользователя
+
+```bash
+usermod -U {user_name}
+```
+
+### Группы
+
+Список всех групп находится в **/etc/group**  
+
+Посмотреть какие в какие группы входит пользователь
+
+```bash
+groups {user_name}
+```
+
+Создать группу
+
+```bash
+addgroup {group_name}
+```
+
+Изменить главную группу
+
+```bash
+usermod {user_name} -g {group_name}
+```
+
+Изменить вторичную группу
+
+```bash
+usermod {user_name} -G {group_name},{group_name}...
+```
+
+Добавить вторичную группу к уже присвоенным
+
+```bash
+usermod {user_name} -a -G {group_name},{group_name}...
+```
+
+Удалить группу (нельзя удалить группа, если она является 
+главной для хотя бы одного пользователя)
+
+```bash
+groupdel {user_name}
+```
+
 
 ### Права доступа (`chmod`)
 
