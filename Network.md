@@ -167,14 +167,14 @@
 - **TCP (Transmision Control Protocol)** - проверяет надежность соединения за счет реализации трехстороннего рукопожатия и гарантирует доставку всех сегментов данных для получения целостного объема.  
 Сегмент TCP состоит из TCP-header заголовка со слежебной информацией и полезной нагрузки (payload).  
 В заголовке передаются различные поля:  
-    > Source Port
-    > Destination Port
-    > Sequence Number
-    > Acknowledgment Number
-    > Header Length (Data Offset)
-    > Flags
-    > Window Size
-    > Checksum
-    > Urgent Pointer
-    > Options
+    - Source Port
+    - Destination Port
+    - Sequence Number
+    - Acknowledgment Number
+    - Header Length (Data Offset)
+    - Flags
+    - Window Size
+    - Checksum
+    - Urgent Pointer
+    - Options
 - **UDP (User Datagram Protocol)** - не проверяет надежность соединения, сразу направляет данные (датаграммы) получателю и не проверяет успешность отправки, за счет чего достигается более быстрая передача данных в сравнении с TCP.
